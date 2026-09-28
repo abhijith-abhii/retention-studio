@@ -1,0 +1,48 @@
+version: playbook-1.0
+simulation_only: true
+weekly_capacity: 100
+# Planning assumption fixed before holdout evaluation, not inferred from its labels.
+evaluation_pool_size: 1000
+minimum_score: 0.20
+cooldown_days: 30
+due_in_days: 3
+high_risk_score: 0.65
+medium_risk_score: 0.35
+excluded_customers: []
+required_signals: [tenure, Contract, MonthlyCharges, PaymentMethod, InternetService, TechSupport]
+# First matching rule wins. No usage, ticket history, or consent is inferred.
+rules:
+  - id: onboarding
+    action: Onboarding assistance
+    owner: Customer success
+    conditions:
+      tenure: {lte: 6}
+    rationale: Early-tenure customer; offer setup guidance and check service fit.
+  - id: billing
+    action: Billing support
+    owner: Billing care
+    conditions:
+      PaymentMethod: {eq: Electronic check}
+      MonthlyCharges: {gte: 80}
+    rationale: Electronic-check payment and monthly charges of at least 80; offer a bill walkthrough without implying a payment problem.
+  - id: education
+    action: Product education
+    owner: Customer success
+    conditions:
+      InternetService: {in: [DSL, Fiber optic]}
+      TechSupport: {eq: "No"}
+    rationale: Internet subscriber without the technical-support add-on; explain available self-service help without implying a service incident.
+  - id: offer
+    enabled: false
+    action: Retention offer review
+    owner: Retention specialist
+    conditions:
+      tenure: {gte: 24}
+      Contract: {eq: Month-to-month}
+      MonthlyCharges: {gte: 90}
+    rationale: Meets configured plan and tenure criteria; a human must verify consent, eligibility, and an approved offer before any action.
+  - id: plan_fit
+    action: Plan-fit review
+    owner: Retention specialist
+    conditions: {}
+    rationale: Review the current subscription against the customer's stated needs; do not infer those needs from the score.

@@ -1,0 +1,7 @@
+[
+  {
+    "severity": "warning",
+    "message": "TotalCharges: missing values retained for training-fit imputation; required playbook signals gate outreach.",
+    "count": 11
+  }
+]

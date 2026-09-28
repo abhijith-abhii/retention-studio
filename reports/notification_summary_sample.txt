@@ -1,0 +1,5 @@
+SIMULATION — NOT SENT
+100 open retention tasks are ready for human review.
+1,035 demonstration accounts scored; weekly new-task capacity: 100.
+No external messages, discounts, account changes, or outcomes were generated.
+Review the local dashboard at http://127.0.0.1:8766/.

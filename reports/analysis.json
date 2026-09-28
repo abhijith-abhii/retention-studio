@@ -1,0 +1,223 @@
+{
+  "customers": 7043,
+  "churned": 1869,
+  "active": 5174,
+  "churn_rate": 0.2653698707936959,
+  "active_monthly_charges": 316985.75,
+  "average_monthly_charge": 64.76169246059918,
+  "segments": {
+    "Contract": [
+      {
+        "segment": "Month-to-month",
+        "customers": 3875,
+        "churned": 1655,
+        "rate": 0.4270967741935484,
+        "ci_low": 0.4116016701124555,
+        "ci_high": 0.4427362848068688,
+        "small": false
+      },
+      {
+        "segment": "One year",
+        "customers": 1473,
+        "churned": 166,
+        "rate": 0.11269517990495587,
+        "ci_low": 0.09754329714868373,
+        "ci_high": 0.12986199804343435,
+        "small": false
+      },
+      {
+        "segment": "Two year",
+        "customers": 1695,
+        "churned": 48,
+        "rate": 0.02831858407079646,
+        "ci_low": 0.02142522468589235,
+        "ci_high": 0.03734517509711272,
+        "small": false
+      }
+    ],
+    "Tenure band": [
+      {
+        "segment": "0\u20136 months",
+        "customers": 1481,
+        "churned": 784,
+        "rate": 0.5293720459149224,
+        "ci_low": 0.5039075382619058,
+        "ci_high": 0.5546845701488499,
+        "small": false
+      },
+      {
+        "segment": "7\u201312 months",
+        "customers": 705,
+        "churned": 253,
+        "rate": 0.3588652482269504,
+        "ci_low": 0.3243098907053021,
+        "ci_high": 0.3949503784436869,
+        "small": false
+      },
+      {
+        "segment": "13\u201324 months",
+        "customers": 1024,
+        "churned": 294,
+        "rate": 0.287109375,
+        "ci_low": 0.2602351518980667,
+        "ci_high": 0.31557497293050607,
+        "small": false
+      },
+      {
+        "segment": "25\u201348 months",
+        "customers": 1594,
+        "churned": 325,
+        "rate": 0.2038895859473024,
+        "ci_low": 0.18483384957518703,
+        "ci_high": 0.2243691652918686,
+        "small": false
+      },
+      {
+        "segment": "49+ months",
+        "customers": 2239,
+        "churned": 213,
+        "rate": 0.09513175524787852,
+        "ci_low": 0.08366282428879476,
+        "ci_high": 0.10798762485571906,
+        "small": false
+      }
+    ],
+    "InternetService": [
+      {
+        "segment": "DSL",
+        "customers": 2421,
+        "churned": 459,
+        "rate": 0.1895910780669145,
+        "ci_low": 0.17447327438618807,
+        "ci_high": 0.2056924238598334,
+        "small": false
+      },
+      {
+        "segment": "Fiber optic",
+        "customers": 3096,
+        "churned": 1297,
+        "rate": 0.4189276485788114,
+        "ci_low": 0.4016589851320858,
+        "ci_high": 0.43639725619327735,
+        "small": false
+      },
+      {
+        "segment": "No",
+        "customers": 1526,
+        "churned": 113,
+        "rate": 0.07404980340760157,
+        "ci_low": 0.06195423409473899,
+        "ci_high": 0.08828458801599456,
+        "small": false
+      }
+    ],
+    "PaymentMethod": [
+      {
+        "segment": "Bank transfer (automatic)",
+        "customers": 1544,
+        "churned": 258,
+        "rate": 0.16709844559585493,
+        "ci_low": 0.1493207516064534,
+        "ci_high": 0.18652860145396313,
+        "small": false
+      },
+      {
+        "segment": "Credit card (automatic)",
+        "customers": 1522,
+        "churned": 232,
+        "rate": 0.15243101182654403,
+        "ci_low": 0.13524947691529432,
+        "ci_high": 0.17136269042894375,
+        "small": false
+      },
+      {
+        "segment": "Electronic check",
+        "customers": 2365,
+        "churned": 1071,
+        "rate": 0.4528541226215645,
+        "ci_low": 0.4328848467629491,
+        "ci_high": 0.4729763133922931,
+        "small": false
+      },
+      {
+        "segment": "Mailed check",
+        "customers": 1612,
+        "churned": 308,
+        "rate": 0.19106699751861042,
+        "ci_low": 0.17261812819557415,
+        "ci_high": 0.2109848190240048,
+        "small": false
+      }
+    ],
+    "TechSupport": [
+      {
+        "segment": "No",
+        "customers": 3473,
+        "churned": 1446,
+        "rate": 0.4163547365390153,
+        "ci_low": 0.40006101321019405,
+        "ci_high": 0.43283330098577055,
+        "small": false
+      },
+      {
+        "segment": "No internet service",
+        "customers": 1526,
+        "churned": 113,
+        "rate": 0.07404980340760157,
+        "ci_low": 0.06195423409473899,
+        "ci_high": 0.08828458801599456,
+        "small": false
+      },
+      {
+        "segment": "Yes",
+        "customers": 2044,
+        "churned": 310,
+        "rate": 0.15166340508806261,
+        "ci_low": 0.1367673663622299,
+        "ci_high": 0.16786635140187842,
+        "small": false
+      }
+    ],
+    "Charge band": [
+      {
+        "segment": "0\u201340 inclusive",
+        "customers": 1838,
+        "churned": 214,
+        "rate": 0.11643090315560392,
+        "ci_low": 0.10256089508426589,
+        "ci_high": 0.13190096091898654,
+        "small": false
+      },
+      {
+        "segment": "Over 40\u201370",
+        "customers": 1622,
+        "churned": 388,
+        "rate": 0.23921085080147966,
+        "ci_low": 0.21908120448498192,
+        "ci_high": 0.26057290204052463,
+        "small": false
+      },
+      {
+        "segment": "Over 70\u2013100",
+        "customers": 2681,
+        "churned": 1014,
+        "rate": 0.3782170831779187,
+        "ci_low": 0.3600468184614343,
+        "ci_high": 0.39673585355914226,
+        "small": false
+      },
+      {
+        "segment": "Over 100",
+        "customers": 902,
+        "churned": 253,
+        "rate": 0.2804878048780488,
+        "ci_low": 0.25214853219978633,
+        "ci_high": 0.3106889440212219,
+        "small": false
+      }
+    ]
+  },
+  "missing_total_charges": 11,
+  "data_label": "IBM fictional telecom sample \u00b7 undated snapshot",
+  "time_series_available": false
+}

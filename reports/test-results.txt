@@ -1,0 +1,26 @@
+...........................                                              [100%]
+=============================== warnings summary ===============================
+tests/test_data_model.py::test_invalid_inputs_rejected[<lambda>7]
+  /Users/rogue/Documents/Codex/2026-09-28/files-pasted-by-the-user-build/work/clean/retention-studio/src/retention/data.py:50: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+    df[col] = df[col].replace("", np.nan)
+
+tests/test_data_model.py: 6 warnings
+tests/test_web.py: 3 warnings
+tests/test_workflow.py: 30 warnings
+  /Users/rogue/Documents/Codex/2026-09-28/files-pasted-by-the-user-build/work/clean-envs/retention-studio/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+    ret = a @ b
+
+tests/test_data_model.py: 6 warnings
+tests/test_web.py: 3 warnings
+tests/test_workflow.py: 30 warnings
+  /Users/rogue/Documents/Codex/2026-09-28/files-pasted-by-the-user-build/work/clean-envs/retention-studio/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+    ret = a @ b
+
+tests/test_data_model.py: 6 warnings
+tests/test_web.py: 3 warnings
+tests/test_workflow.py: 30 warnings
+  /Users/rogue/Documents/Codex/2026-09-28/files-pasted-by-the-user-build/work/clean-envs/retention-studio/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+    ret = a @ b
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+27 passed, 118 warnings in 2.03s

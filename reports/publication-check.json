@@ -1,0 +1,7 @@
+{
+  "project": "retention-studio",
+  "text_files_checked": 62,
+  "history_blobs_checked": 0,
+  "findings": [],
+  "limitations": "Pattern-based check, not proof of absence of secrets. Authored sample data and source licenses reviewed separately."
+}

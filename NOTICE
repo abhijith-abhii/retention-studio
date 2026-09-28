@@ -1,0 +1,11 @@
+Retention Studio portfolio demonstration
+
+Includes the unchanged Telco-Customer-Churn.csv sample distributed by IBM in:
+https://github.com/IBM/telco-customer-churn-on-icp4d
+Revision d5371f5d83a446ad5673cbcca3b814b926491f8a
+
+The IBM repository is distributed under Apache License 2.0, reproduced in
+data/raw/LICENSE-IBM.txt. IBM attribution and the original data are retained.
+All processed data, split files, reports, models, UI, and workflow logic are
+derived or newly authored project outputs, not IBM-authored original artifacts.
+IBM does not endorse this project.

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retention-studio"
+version = "1.0.0"
+description = "Reproducible churn analysis and a simulation-only retention workflow"
+requires-python = ">=3.12"
+dependencies = ["pandas>=2.2,<4", "scikit-learn>=1.5,<2", "Flask>=3.1,<4", "joblib>=1.4,<2", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+retention = "retention.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

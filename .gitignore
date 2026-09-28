@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.DS_Store
+.env
+var/*
+!var/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/training/*.csv
+data/scoring/*.csv
+artifacts/*/model.joblib
+.sites-runtime/
