@@ -23,11 +23,15 @@ Follow the README installation block, then: Bootstrap from raw sample data, star
 
 ## Five interview questions
 
-1. **What problem does this project solve, and what is its unit of work?** Explain prioritize reviewable churn retention work, identify customer success analysts as the audience, and trace one concrete example through the files above. Use the demonstration output rather than hypothetical impact.
-2. **Why did you choose the first design decision?** Use disjoint train/validation/holdout partitions and fit preprocessing inside the model pipeline. Show the corresponding implementation and a test that would fail if that property were removed.
-3. **How do you protect correctness when inputs or execution change?** Eligibility, cooldown and weekly capacity are operational constraints applied after scoring. Explain the relevant invalid-input or edge-case test and distinguish a checked property from an untested assumption.
-4. **How do you make results inspectable and reproducible?** SQLite transactions, idempotency keys and an audit trail protect repeated scoring runs and task changes. Point to actual outputs and recorded commands. Explain why a successful example is weaker evidence than a tested boundary or independently reconciled total.
-5. **What would you improve before real deployment or real-data use?** IBM data describe fictional undated telecom customers. Historical churn labels do not validate a future prediction horizon. Tasks and outcomes are simulation-only; no CRM messages, account changes or realized savings are claimed. Choose one limitation, describe the missing evidence, and propose a measurable acceptance check rather than promising production readiness.
+1. **What does the retention queue represent?** A bounded list of customers to review under a configured outreach capacity. It operationalizes model scores but does not prove an intervention will prevent churn.
+
+2. **Why calibrate churn probabilities?** Ranking and probability quality are different. Calibration makes probability estimates more interpretable for a capacity-limited review workflow, subject to the historical data assumptions.
+
+3. **How is repeat outreach controlled?** The workflow records decisions in SQLite and applies cooldown rules. An audit history makes queue transitions and previous actions inspectable.
+
+4. **What is the dataset limitation?** The telecom data is fictional and historical-label based. It is not a randomized intervention dataset, so the project cannot estimate causal retention uplift or real business savings.
+
+5. **What evidence supports reproducibility?** A fresh bootstrap regenerated the project state and the 27-test suite passed. The repository preserves model evaluation, queue behavior and a working browser demonstration.
 
 ## Independent exercise
 
@@ -41,6 +45,6 @@ The implementation was developed with substantial AI assistance under Abhijith V
 
 Suggested factual bullet after personally validating the demo:
 
-- Implemented and validated prioritize reviewable churn retention work using pandas · scikit-learn · Flask, with calibrated models and documented correctness checks and limitations.
+- Extended an AI-assisted churn review application with a capacity-limited action queue, cooldown rules and audit history; verified fresh bootstrap and 27 tests on fictional telecom data.
 
 Use [VERIFICATION.md](VERIFICATION.md) to add only measured numbers. Do not claim production traffic, users, savings, upstream acceptance or cloud deployment without corresponding evidence.
